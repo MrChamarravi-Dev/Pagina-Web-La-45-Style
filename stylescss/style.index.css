@@ -1,0 +1,60 @@
+/* Estilos generales del footer */
+.footer {
+    background-color: #1a1a1a; /* Un fondo un poco más oscuro resalta mejor el naranja */
+    color: #fff;
+    text-align: center;
+    padding: 20px 15px; /* Un poco más de padding para que respire el diseño */
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Línea divisoria muy sutil */
+}
+
+.Creditos-Diego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer p {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #cccccc;
+    margin: 0; /* Elimina márgenes por defecto para alinear correctamente */
+    line-height: 1.15;
+}
+
+/* --- Contenedor nuevo para la fila del desarrollador --- */
+.info-desarrollador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Espaciado entre tu nombre y los logos */
+    flex-wrap: wrap; /* Evita que se rompa el diseño en pantallas de celulares */
+}
+
+/* --- Estilos de los iconos sociales --- */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.social-icons img {
+    transition: all 0.3s ease;
+}
+
+/* Efectos de hover modernos */
+.social-icons a:hover img {
+    transform: scale(1.15) translateY(-2px);
+}
+
+/* Efecto de iluminación naranja específico para el logo de GitLab */
+.social-icons a[href*="gitlab"] img:hover {
+    filter: drop-shadow(0 4px 8px rgba(252, 109, 38, 0.5));
+}
+
+/* Efecto de iluminación blanco sutil para el logo de GitHub */
+.social-icons a[href*="github"] img:hover {
+    filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.3));
+}
