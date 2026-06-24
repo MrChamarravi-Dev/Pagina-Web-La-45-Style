@@ -52,7 +52,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .footer p {
@@ -68,7 +68,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px; /* Espaciado entre tu nombre y los logos */
+    gap: 16px; /* Espaciado entre tu nombre y los logos */
     flex-wrap: wrap; /* Evita que se rompa el diseño en pantallas de celulares */
 }
 
