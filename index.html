@@ -9,6 +9,7 @@
   </head>
 
   <body>
+
     <nav class="navbar">
       <div class="logoInicial45Style">
         <a href="index.html">
@@ -21,27 +22,37 @@
       </div>
     </nav>
 
-    <nav class ="Acceso_Directos" >
-      <ul><a href= "index.html">Inicio</a></ul>
-      <ul><a href= "#">Tienda</a></ul>
-      <ul><a href= "#">Soporte Técnico</a></ul>
-      <ul><a href= "#">Contacto</a></ul>
-      <ul><a href = "#">Iniciar Sesión </a></ul>
-    </nav>
+<nav class="Acceso_Directos">
 
-    <div class ="Buscador_La45Style">
-      <form method="get" id = "buscarModsitos45Style" class = "search-form">
-        <fieldset>
-          <legend>Buscar Modsitos</legend>
-          <input type="text" name="buscar" placeholder="Buscar..." />
-          <button name="Buscar-ModsCatalogo" > <img src="Recursos_La-45_Style/searchicon.svg" id = lupa/> 
-            </button>
-        </fieldset>
-      </form>
-    </div>
+  <div class="Buscador_La45Style">
+    <form method="get" id="buscarModsitos45Style" class="search-form">
+      <fieldset class="search-fieldset">
+        <div class="search-wrapper" id="searchWrapper">
+          <input
+            type="text"
+            name="buscar"
+            id="inputBusqueda"
+            placeholder="Buscar modsitos..."
+          />
+          <button type="button" id="btnBuscar">
+            <img
+              src="Recursos_La-45_Style/searchicon.svg"
+              id="lupa"
+              alt="Buscar"
+            />
+          </button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
 
+  <ul><a href="index.html">Inicio</a></ul>
+  <ul><a href="#">Tienda</a></ul>
+  <ul><a href="#">Soporte Técnico</a></ul>
+  <ul><a href="#">Contacto</a></ul>
+  <ul><a href="#">Iniciar Sesión</a></ul>
 
-
+</nav>
 
     <footer class="footer">
       <div class="Creditos-Diego">
@@ -69,5 +80,10 @@
         </div>
       </div>
     </footer>
+
+
+
+  <script src="scripts/Script_Index.js"></script>
+
   </body>
 </html>
