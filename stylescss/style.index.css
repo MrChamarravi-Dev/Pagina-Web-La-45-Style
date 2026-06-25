@@ -1,22 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Apila los elementos verticalmente */
-    min-height: 100vh; /* Obliga al body a medir al menos el 100% del alto de tu pantalla */
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    /* Fondo oscuro moderno para resaltar el efecto cristal */
+    background: linear-gradient(135deg, #0f0f13 0%, #1a1a1e 100%);
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    background-color: #1a1a1a;
-    padding: 0px 40px;
-    border-bottom: 0px solid #1a1a1a;
+    background: rgba(26, 26, 26, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0 40px;
     height: 100px;
     width: 100%; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    position: relative; 
+    z-index: 10;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .logoInicial45Style {
@@ -26,74 +37,134 @@ body {
 }
 
 .firma45style {
-    height: 80px; 
+    height: 80px; /* Restaurado a tu tamaño original */
     width: auto;
     object-fit: contain;
-    transition: all 0.4s ease; 
-    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
 }
 
 .firma45style:hover {
-    transform: translateY(-5px) scale(1.15); 
-    filter: drop-shadow(0px 8px 15px rgba(207, 207, 207, 0.977));
+    transform: translateY(-5px) scale(1.15); /* Restaurado a tu animación original */
+    filter: drop-shadow(0px 8px 15px rgba(255, 255, 255, 0.15));
+}
+
+/* --- NAVEGACIÓN DE ACCESOS DIRECTOS --- */
+.Acceso_Directos {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px; 
+    z-index: 20; 
+} 
+
+.Acceso_Directos ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.Acceso_Directos ul a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease; 
+}
+
+/* Efecto moderno de línea inferior animada */
+.Acceso_Directos ul a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+.Acceso_Directos ul a:hover {
+    color: #ffffff;
+}
+
+.Acceso_Directos ul a:hover::after {
+    width: 100%;
+}
+
+.Buscador_La45Style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px; 
+    padding: 0 20px; 
 }
 
 .footer {
-    background-color: #1a1a1a; /* Un fondo un poco más oscuro resalta mejor el naranja */
+    background: rgba(26, 26, 26, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     color: #fff;
     text-align: center;
-    padding: 20px 15px; /* Un poco más de padding para que respire el diseño */
+    padding: 10px 10px; 
     margin-top: auto;
-    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Línea divisoria muy sutil */
+    border-top: 1px solid rgba(255, 255, 255, 0.05); 
 }
 
 .Creditos-Diego {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 8px;
 }
 
 .footer p {
-    font-size: 14px;
-    font-family: 'Poppins', bold;
-    color: #ffffff;
-    margin: 0; /* Elimina márgenes por defecto para alinear correctamente */
-    line-height: 1.05;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0; 
+    letter-spacing: 0.5px;
+    font-weight: bold;
 }
-
 
 .info-desarrollador {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px; /* Espaciado entre tu nombre y los logos */
-    flex-wrap: wrap; /* Evita que se rompa el diseño en pantallas de celulares */
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
-/* --- Estilos de los iconos sociales --- */
 .social-icons {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     align-items: center;
 }
 
 .social-icons img {
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0.7;
 }
 
-/* Efectos de hover modernos */
 .social-icons a:hover img {
-    transform: scale(1.15) translateY(-2px);
+    transform: scale(1.2) translateY(-3px);
+    opacity: 1;
 }
 
-/* Efecto de iluminación naranja específico para el logo de GitLab */
 .social-icons a[href*="gitlab"] img:hover {
-    filter: drop-shadow(0 4px 8px rgba(252, 109, 38, 0.5));
+    filter: drop-shadow(0 0px 12px rgba(252, 109, 38, 0.7));
 }
 
-/* Efecto de iluminación blanco sutil para el logo de GitHub */
 .social-icons a[href*="github"] img:hover {
-    filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0 0px 12px rgba(255, 255, 255, 0.5));
 }
