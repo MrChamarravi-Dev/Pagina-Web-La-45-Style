@@ -167,6 +167,50 @@ body {
     border-radius: 2px;
 }
 
+
+.slider-wrapper45Style{
+    position: relative;
+    width: 99.5%; /* Asegura que ocupe todo el ancho */
+    max-width: none; /* Elimina cualquier restricción de ancho previo */
+    margin: 0 auto;
+}
+
+.slider{
+    margin-top: 10px;
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: .2rem;
+}
+
+.slider img{
+    flex: 1 0 100%;
+}
+
+
+
+.Productos_La45Style{
+    justify-content: center;    
+    align-items: center;
+    font-weight: bold;
+}
+
+.Productos_La45Style p{
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
 .Acceso_Directos ul a:hover {
     color: #ffffff;
 }

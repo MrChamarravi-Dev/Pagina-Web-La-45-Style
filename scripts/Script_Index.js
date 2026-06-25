@@ -24,3 +24,4 @@ document.addEventListener('click', (event) => {
         searchWrapper.classList.remove('activo');
     }
 });
+
